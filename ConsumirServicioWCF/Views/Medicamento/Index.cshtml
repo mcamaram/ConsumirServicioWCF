@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" onclick="AbrirModal(0)" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Agregar
+    </button>
+    <br />
+    <div id="tabla">
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="lblTitulo">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="txtIdMedicamento" class="col-form-label">IdMedicamento:</label>
+                            <input name="IdMedicamento" type="text" class="form-control clear" id="txtIdMedicamento" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtNombre" class="col-form-label">Nombre:</label>
+                            <input name="Nombre" type="text" class="form-control clear required" id="txtNombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtConcentracion" class="col-form-label">Concentracion:</label>
+                            <input name="Concentracion" type="text" class="form-control clear required" id="txtConcentracion">
+                        </div>
+                        <div class="form-group">
+                            <label for="cboformaFarmaceutica" class="col-form-label">Forma Farmaceutica:</label>
+                            <select name="Forma Farmaceutica" class="form-control clear required" id="cboformaFarmaceutica">
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPrecio" class="col-form-label">Precio:</label>
+                            <input name="Precio" type="text" class="form-control clear required" id="txtPrecio">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtStock" class="col-form-label">Stock:</label>
+                            <input name="Stock" type="text" class="form-control clear required" id="txtStock">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPresentacion" class="col-form-label">Presentacion:</label>
+                            <input name="Presentacion" type="text" class="form-control clear required" id="txtPresentacion">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnGuardarCambios" type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+                <div id="divErrors">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/Medicamento.js"></script>
+</body>
+
+</html>
